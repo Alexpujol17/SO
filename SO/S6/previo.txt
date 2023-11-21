@@ -1,0 +1,17 @@
+ - ¿En qué fichero del /proc, y en qué campo del fichero, se muestra el número de fallos de página totales del proceso?
+	Se muestra en /proc/PID/stat bajo el nombre de cminflt y cmajflt.
+
+
+ - ¿Qué opción has utilizado? ¿En qué columnas se muestra la cantidad de swap-in y swap-out?
+	Hemos utilizado vmstat 1. Swap-in se encuentra en la columna "si" y swap-out en la columna "so".
+
+
+ - Utiliza el comando /usr/bin/time para medir el tiempo que tarda en ejecutar Fibonacci si se le pasan los parámetros 10, 20, 30, 40 y 50
+    10 -> 0:00.00 elapsed
+    20 -> 0:00.01 elapsed
+    30 -> 0:00.01 elapsed
+    40 -> 0:00.80 elapsed
+    50 -> 8:23.57 elapsed
+
+ - Anota en el fichero previo.txt con qué valor de nice se ejecuta fibonacci desde el script BAJA_PRIO_FIB. Para averiguarlo, consulta en la página del manual el comportamiento de nice.
+	Por defecto el valor de nice es 10.

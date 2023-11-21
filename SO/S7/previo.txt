@@ -1,0 +1,76 @@
+1. Devuelve el mensaje que has escrito, en caso de pulsar dos veces, la segunda deveulve fin de la ejecución.
+2. ./es1 > x.txt
+3.  -rwxrwxr-x 1 alex alex 16136 nov 20 11:23 es1
+    -rw-r--r-- 1 alex alex  1170 feb  8  2021 es1.c
+    -rwxrwxr-x 1 alex alex 16288 nov 20 11:23 es2
+    -rw-r--r-- 1 alex alex  1700 feb  8  2021 es2.c
+    -rwxrwxr-x 1 alex alex 16136 nov 20 11:23 es3
+    -rw-r--r-- 1 alex alex   943 feb  8  2021 es3.c
+    -rwxrwxr-x 1 alex alex 16048 nov 20 11:23 es4
+    -rw-r--r-- 1 alex alex  1206 feb  8  2021 es4.c
+    -rwxrwxr-x 1 alex alex 15776 nov 20 11:23 es5
+    -rw-r--r-- 1 alex alex    31 feb  8  2021 es5.c
+    -rwxrwxr-x 1 alex alex 16048 nov 20 11:23 es6
+    -rw-r--r-- 1 alex alex   112 feb  8  2021 es6.c
+    -rwxrwxr-x 1 alex alex 16008 nov 20 11:23 es7
+    -rw-r--r-- 1 alex alex   107 feb  8  2021 es7.c
+    -rwxrwxr-x 1 alex alex 16096 nov 20 11:23 es8
+    -rw-r--r-- 1 alex alex   644 feb  8  2021 es8.c
+
+4.  Modo de empleo: grep [OPCIÓN]... PATRONES [FICHERO]...
+    Pruebe 'grep --help' para más información.
+        PID TTY          TIME CMD
+    57560 pts/0    00:00:00 bash
+    57929 pts/0    00:00:00 ps
+
+    grep | ps
+
+5.  Entero en representacion interna. Voy a escribir 4 bytes:
+    B)
+    Entero en formato string. Voy a escribir 5 bytes:
+    10562
+
+6.  read_driver_1 (struct file *f, char __user * buffer, size_t s, loff_t * off)
+    {
+    char *localBuffer =
+        "Driver 1 read operation\nSponsored by Laboratorios Gelocatas SL\n";
+
+    int size = strlen (localBuffer) - *off;
+
+    if (size > s)
+        size = s;
+
+    //this functions copies from system address space to user address space
+    copy_to_user (buffer, localBuffer + *off, size);
+
+    *off = *off + size;
+
+    return size;
+
+    }
+    
+    read_driver_2 (struct file *f, char __user * buffer, size_t s, loff_t * off)
+    {
+    char *localBuffer =
+        "DRIVER 2 READ OPERATION\nSPONSORED BY LABORATORIOS GELOCATAS SL\n";
+
+    int size = strlen (localBuffer) - *off;
+
+    if (size > s)
+        size = s;
+
+    //this functions copies from system address space to user address space
+    copy_to_user (buffer, localBuffer + *off, size);
+
+    *off = *off + size;
+
+    return size;
+
+    }
+
+7.  // major and minors are the device driver identifiers. They are used to 
+    // associate a logical device with its specific access code 
+
+
+
+

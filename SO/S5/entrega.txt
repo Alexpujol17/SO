@@ -1,0 +1,110 @@
+35. 
+000000000000038c r __abi_tag
+                 U atoi@GLIBC_2.2.5
+0000000000004010 B __bss_start
+0000000000004020 b completed.0
+                 w __cxa_finalize@GLIBC_2.2.5
+0000000000004000 D __data_start
+0000000000004000 W data_start
+0000000000001130 t deregister_tm_clones
+00000000000011a0 t __do_global_dtors_aux
+0000000000003d98 d __do_global_dtors_aux_fini_array_entry
+0000000000004008 D __dso_handle
+0000000000003da0 d _DYNAMIC
+0000000000004010 D _edata
+0000000000005040 B _end
+                 U exit@GLIBC_2.2.5
+0000000000001454 T _fini
+00000000000011e0 t frame_dummy
+0000000000003d90 d __frame_dummy_init_array_entry
+0000000000002144 r __FRAME_END__
+0000000000004040 B globalArray
+0000000000003f90 d _GLOBAL_OFFSET_TABLE_
+                 w __gmon_start__
+000000000000206c r __GNU_EH_FRAME_HDR
+0000000000001000 T _init
+0000000000002000 R _IO_stdin_used
+                 w _ITM_deregisterTMCloneTable
+                 w _ITM_registerTMCloneTable
+                 U __libc_start_main@GLIBC_2.34
+00000000000011e9 T main
+                 U malloc@GLIBC_2.2.5
+0000000000001160 t register_tm_clones
+                 U sprintf@GLIBC_2.2.5
+0000000000001100 T _start
+                 U strlen@GLIBC_2.2.5
+0000000000004010 D __TMC_END__
+                 U write@GLIBC_2.2.5
+36.
+El tamaño del static es mucho más grande
+
+37
+
+    static:
+
+            00400000-00401000 r--p 00000000 103:02 25041140                          /home/alex/Escritorio/Universitat/SO/S5/mem1_static
+            00401000-00498000 r-xp 00001000 103:02 25041140                          /home/alex/Escritorio/Universitat/SO/S5/mem1_static
+            00498000-004c1000 r--p 00098000 103:02 25041140                          /home/alex/Escritorio/Universitat/SO/S5/mem1_static
+            004c1000-004c5000 r--p 000c0000 103:02 25041140                          /home/alex/Escritorio/Universitat/SO/S5/mem1_static
+            004c5000-004c8000 rw-p 000c4000 103:02 25041140                          /home/alex/Escritorio/Universitat/SO/S5/mem1_static
+            004c8000-004ce000 rw-p 00000000 00:00 0 
+            01cda000-01cfc000 rw-p 00000000 00:00 0                                  [heap]
+            7ffca0029000-7ffca004a000 rw-p 00000000 00:00 0                          [stack]
+            7ffca005b000-7ffca005f000 r--p 00000000 00:00 0                          [vvar]
+            7ffca005f000-7ffca0061000 r-xp 00000000 00:00 0                          [vdso]
+            ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+    dynamic:
+
+            565549f13000-565549f14000 r--p 00000000 103:02 25041318                  /home/alex/Escritorio/Universitat/SO/S5/mem1_dynamic
+            565549f14000-565549f15000 r-xp 00001000 103:02 25041318                  /home/alex/Escritorio/Universitat/SO/S5/mem1_dynamic
+            565549f15000-565549f16000 r--p 00002000 103:02 25041318                  /home/alex/Escritorio/Universitat/SO/S5/mem1_dynamic
+            565549f16000-565549f17000 r--p 00002000 103:02 25041318                  /home/alex/Escritorio/Universitat/SO/S5/mem1_dynamic
+            565549f17000-565549f18000 rw-p 00003000 103:02 25041318                  /home/alex/Escritorio/Universitat/SO/S5/mem1_dynamic
+            565549f18000-565549f19000 rw-p 00000000 00:00 0 
+            56554b28d000-56554b2ae000 rw-p 00000000 00:00 0                          [heap]
+            7f48e7400000-7f48e7428000 r--p 00000000 103:02 2230374                   /usr/lib/x86_64-linux-gnu/libc.so.6
+            7f48e7428000-7f48e75bd000 r-xp 00028000 103:02 2230374                   /usr/lib/x86_64-linux-gnu/libc.so.6
+            7f48e75bd000-7f48e7615000 r--p 001bd000 103:02 2230374                   /usr/lib/x86_64-linux-gnu/libc.so.6
+            7f48e7615000-7f48e7619000 r--p 00214000 103:02 2230374                   /usr/lib/x86_64-linux-gnu/libc.so.6
+            7f48e7619000-7f48e761b000 rw-p 00218000 103:02 2230374                   /usr/lib/x86_64-linux-gnu/libc.so.6
+            7f48e761b000-7f48e7628000 rw-p 00000000 00:00 0 
+            7f48e77b5000-7f48e77b8000 rw-p 00000000 00:00 0 
+            7f48e77c7000-7f48e77c9000 rw-p 00000000 00:00 0 
+            7f48e77c9000-7f48e77cb000 r--p 00000000 103:02 2230366                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+            7f48e77cb000-7f48e77f5000 r-xp 00002000 103:02 2230366                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+            7f48e77f5000-7f48e7800000 r--p 0002c000 103:02 2230366                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+            7f48e7801000-7f48e7803000 r--p 00037000 103:02 2230366                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+            7f48e7803000-7f48e7805000 rw-p 00039000 103:02 2230366                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+            7ffcdeb45000-7ffcdeb66000 rw-p 00000000 00:00 0                          [stack]
+            7ffcdebd9000-7ffcdebdd000 r--p 00000000 00:00 0                          [vvar]
+            7ffcdebdd000-7ffcdebdf000 r-xp 00000000 00:00 0                          [vdso]
+            ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+
+38.
+    01cda000-01cfc000 rw-p 00000000 00:00 0                                  [heap]
+    56554b28d000-56554b2ae000 rw-p 00000000 00:00 0                          [heap]
+
+39.
+    3: 01b6b000-01b8d000 rw-p 00000000 00:00 0                                  [heap]
+    5: 00724000-00746000 rw-p 00000000 00:00 0                                  [heap]
+    100: 005bd000-00642000 rw-p 00000000 00:00 0                                  [heap]
+
+    Cambia el tamaño ya que wn funcion de el numero de malloc hechos se reserva más o menos memoria.
+
+40.
+    559b9a7bf000-559b9a7e0000 rw-p 00000000 00:00 0                          [heap]
+    Vemos que reserva mucho menos tamaño de memoria ya que antes de finalizar cada iteración se libera la memoria usada.
+
+41.
+    3: 5612a7d75000-5612a7d78000 rw-p 00000000 00:00 0                          [heap]
+    5: 556e3ae54000-556e3ae59000 rw-p 00000000 00:00 0                          [heap]
+    100: 55ed41f24000-55ed41f88000 rw-p 00000000 00:00 0                          [heap]
+
+    Reserva menos memoria que el malloc ya que el malloc reserva más memoria de la que se pide y el sbrk mas.
+
+42.
+    Acaba accediendo a una posicion de memoria invalida, se tendria que cambiar que el while fuera infinito.
+
+

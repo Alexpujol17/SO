@@ -1,0 +1,14 @@
+1. Se finaliza el programa e imprime Temporizador la maquina.
+2. Al hacer kill se finaliza el programa al igual que si esperas el sigalarm, pero el mensaje que sale por pantalle es diferente,
+en este caso es: Terminado (killed)
+3.Signal handler. Con el waitpid.
+4. No, no se ejecutara nunca ya que la alarma siempre llega a su fin.
+5. Cada vez que al proceso le llega un sigalarm, este suma 10 a la variable global segundos, el temporizador funciona acorde a las
+intenciones del programa si no recivi signals desde la terminal, ya que cada diez segundos actualiza la variable, en caso de que 
+le lleguen los signals del sistema, se descontrola el tiempo ya que puede llegar a 100 en un momento.
+6. No, por ejemplo no se puede modificar el SIGKILL o SIGSTOP.
+7.  Con un if alarm() != 0 para ver si havia una alarma programada antes
+8. Lo reciben los dos, se ve ejecutando el programa.
+9. Se ejecutan 10 sigalarm, ya que solo lo ejecuta el hijo y el padre se queda en sigsuspend. Lo he comprovado durante la ejecucion 
+del programa en otra ventana de la terminal con la instruccion ps -x para ver el pid de los procesos en ejecucion, y se ve que el 
+que recibe la alarma todo el rato es el hijo.
