@@ -7,10 +7,11 @@
 int
 main ()
 {
-  char c;
+  char c[256];
   char *buf = "fin ejecución\n";
   char buffer[1024];
   int ret;
+
   // USO
   sprintf (buffer, "................................................\n");
   write (2, buffer, strlen (buffer));
@@ -24,14 +25,14 @@ main ()
 
 
   // Leemos del canal 0 (entrada std), 1 bye
-  ret = read (0, &c, sizeof (c));
+  ret = read (0, &c, 256);
   // Cuando el read devuelve 0 significa que se ha acabado la 
   // entrada de datos --> acabamos el bucle de lectura
   while (ret > 0)
     {
       // Escribimos en el canal 1 (salida std) 1 byte
-      write (1, &c, sizeof (c));
-      ret = read (0, &c, sizeof (c));
+      write (1, &c, 256);
+      ret = read (0, &c, 256);
     }
   write (1, buf, strlen (buf));
 }

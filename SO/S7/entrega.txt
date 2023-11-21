@@ -1,0 +1,37 @@
+55. ./es1 > /dev/pts/1
+    ./es1 | ./es1
+    strace -o salida_v2 -e read ./es1_v2 < es2.c
+    strace -o salida_v1 -e read ./es1 < es2.c
+
+    La diferencia es que el es1 lee caracter a caracter y el es1_v2 lee de 256 en 256.
+    es1 hace 1703 llamadas a sistema.
+    es1_v2 hace 10 llamadas a sistema.
+
+    El codigo es1 es más ineficiente ya que es1_v2 hace lo mismo haciendo muchas menos llamadas a sistema.
+
+56. Cuando el primer parametro es 0 la salida es en formato ASCII, cuando es uno en formati int.
+
+57. Los resultados son diferentes ya que el programa inerpreta la entrada como int pero uno le envia int y el otro numeros en ASCII.
+
+58. En el es4 escribe el caracter y no el int, eso hace que imprima la entrada tal cual la ha recivido. Por eso cuando recive int es
+    inteligible
+
+59. CMD                         %CPU     TIME
+    ./es1                       0.0      00:00:00
+    ./es5                       99.7     00:00:48
+
+    es5 hace una espera activa (while(1)) que consume CPU durante un tiempo. es1 hace una espera pasiva.
+
+60. "read correcte" "read interromput per signal".
+
+61. En la primera nada. EN la segunda no acabara sino que continuara. 
+
+62. Si, el 249 el rtc i el 250 dax.
+
+63.
+    Module                  Size  Used by
+    myDriver2              16384  0
+    myDriver1              16384  0
+
+64. mknod myDevice c 100 0
+
