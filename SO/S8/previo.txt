@@ -1,0 +1,24 @@
+1. mknod mypipe p
+   cat > mypipe 
+   cat < mypipe
+
+2. Desde diferente terminal se necesita un pipe con nombre siempre, en la misma terminal se puede hacer con un pipe sin 
+nombre, con el comando cat | cat.
+
+3.  int p[2];
+    pipe(p);
+    close(4);
+    dup(p[1]);
+
+4. createSocket:
+   // Returns the file descriptor associated to the connection.
+   // accept system call will fill the socketAddr parameter
+   // with the address of the socket for the client which is requesting the
+   // connection, and the addrSize parameter with the size of that address. 
+
+   serverConnection:
+   // Returns the socket virtual device that the client should use to access 
+   // the socket, if the connection is successfully established 
+   // and -1 in case of error
+   // Connect system call requires the address of the 
+   // server socket to request the connection and the size of that address. 

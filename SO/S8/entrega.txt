@@ -1,0 +1,11 @@
+67.
+    Inicio
+    Fin 
+    Es porque el canal de salida pasa a ser el archivo
+
+68.
+    No acaban ninguno de los dos ya que el padre se queda esperando al hijo y el hijo se queda esperando a que lleguen 
+    mas cosas por la pipe.
+
+69.
+    Si abriendo y cerrando cuando necesitamos.
