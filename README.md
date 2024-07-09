@@ -1,1 +1,2 @@
 # SO
+Parctiques de SO 
